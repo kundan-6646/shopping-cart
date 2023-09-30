@@ -40,12 +40,12 @@ function App() {
     <Router>
       <div className="App">
         <header>
-          <Link to="/"><div className="brand">Shopping Cart</div></Link>
+          <Link to="/shopping-cart"><div className="brand">Shopping Cart</div></Link>
           <div className="nav-link">
-            <Link to="/"><div className={"nav-link-item " + (active === 'Home' ? 'active' : '')} onClick={()=> {
+            <Link to="/shopping-cart"><div className={"nav-link-item " + (active === 'Home' ? 'active' : '')} onClick={()=> {
               setActive('Home');
             }}><span className="material-icons">home</span></div></Link>
-            <Link to="/cart"><div className={"nav-link-item " + (active === 'Cart' ? 'active' : '')} onClick={()=> {
+            <Link to="/shopping-cart/cart"><div className={"nav-link-item " + (active === 'Cart' ? 'active' : '')} onClick={()=> {
               setActive('Cart');
             }}>
             <span className="material-icons">shopping_cart</span>
