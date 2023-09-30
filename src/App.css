@@ -1,38 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+}
+
+header {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+}
+
+header .brand {
+  font-weight: bold;
+}
+
+header > .nav-link {
+  display: flex;
+  gap: 25px;
+}
+
+header a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-link > a > .nav-link-item {
+  padding: 0 6px;
+  border-bottom: 3px solid #000;
+  transition: 0.7s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-link-item:hover {
+  opacity: 0.9;
+}
+
+.nav-link-item > .cart-count {
+  position: absolute;
+  background-color: #6499E9;
+  font-size: 12px;
+  top: -8px;
+  right: -13px;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  border-color: #fff !important;
+}
+
+
+.container {
+  padding: 20px;
+}
+
+.container > h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container > .products {
+  padding: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+.product {
+  width: 14rem;
+  height: auto;
+  border: 1px solid gray;
+  margin: 10px 0;
+  border-radius: 6px;
+  box-shadow: 2px 2px 5px gray;
+  padding: 5px;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.product > img {
+  width: 100%;
+}
+
+.product > button {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  width: calc(100% - 10px);
+  padding: 10px 0;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  transition: 0.4s;
+}
+
+.product > button:hover {
+  outline: 1px solid #000;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.product > .product-info {
+  color: gray;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.product-info .title {
+  font-weight: bold;
 }
