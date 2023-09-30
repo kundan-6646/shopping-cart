@@ -2,7 +2,7 @@
 let Product = ({data, addProductToCart, removeProductToCart})=> {
     return (
         <div className="product">
-            <img src={data.images[0]} alt={data.description} />
+            <img src={data.thumbnail} alt={data.description} />
             <div className="product-info">
                 <div className="product-info-item title">
                     {data.title}

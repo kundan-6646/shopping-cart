@@ -125,3 +125,63 @@ header a {
 .product-info .title {
   font-weight: bold;
 }
+
+.my-cart {
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+
+.my-cart > .cart-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 60%;
+}
+
+.my-cart > .checkout-list {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 30%;
+  background-color: #000;
+  color: #fff;
+  padding: 20px 10px;
+}
+
+.checkout-list > h4 {
+  text-align: center;
+}
+
+.checkout-list > ul {
+  margin-top: 30px;
+}
+
+.checkout-list > ul > li {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.total-price {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding: 10px 0;
+}
+
+.checkout-list > button {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  transition: 0.4s;
+}
+
+.checkout-list > button:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #000;
+  outline: 1px solid #fff;
+}

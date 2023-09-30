@@ -55,7 +55,7 @@ function App() {
         </header>
         <Routes>
           <Route path="/" element={<Home products={products} addProductToCart={addProductToCart} />} />
-          <Route path="/cart" element={<Cart products={cartProduts} removeProductToCart={removeProductToCart} />} />
+          <Route path="/cart" element={<Cart products={cartProduts} removeProductToCart={removeProductToCart} checkout={setCartProduts} />} />
         </Routes>
         {/* Your site footer can go here */}
       </div>
